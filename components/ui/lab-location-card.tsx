@@ -2,10 +2,8 @@ import { Building2, MapPin, Map } from "lucide-react";
 import { LabLocation } from "@/types";
 
 export function LabLocationCard({ location }: { location: LabLocation }) {
-  const mapsQuery = encodeURIComponent([location.name, ...location.address].join(", "));
-
   return (
-    <div className="flex flex-col gap-4 border-white/10 py-6 px-15">
+    <div className="flex flex-col gap-4 border-white/10 py-6 px-8 w-full md:w-1/2 lg:w-1/3 ">
       <div className="flex items-center gap-2 text-base  text-stone">
         <Building2 size={16} className="text-blaze-500" aria-hidden />
         {location.name}
@@ -16,7 +14,7 @@ export function LabLocationCard({ location }: { location: LabLocation }) {
           <MapPin size={13} aria-hidden />
           Location
         </span>
-        <address className="text-base not-italic leading-relaxed text-stone">
+        <address className="text-xs not-italic leading-relaxed text-stone">
           {location.address.map((line) => (
             <span key={line} className="block">
               {line}
@@ -26,7 +24,7 @@ export function LabLocationCard({ location }: { location: LabLocation }) {
       </div>
 
       <a
-        href={`https://maps.google.com/?q=${mapsQuery}`}
+        href={location.mapsUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wide text-contact-gold hover:text-gold-300"

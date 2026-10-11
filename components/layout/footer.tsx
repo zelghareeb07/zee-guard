@@ -4,6 +4,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import {navBarLogo} from "@/constants/icons"
 import { copperplate, inter } from "@/app/fonts";
+import { WHATSAPP_LINK } from "@/constants/contact";
 
 library.add(fab);
 import { cn } from "@/lib/utils";
@@ -20,7 +21,7 @@ const SOCIALS : Socials[] = [
   {
     label: "WhatsApp",
     icon: "whatsapp",
-    href: "https://wa.me/201124081447",
+    href: WHATSAPP_LINK,
     color: "text-[#25D366]",
   },
   {

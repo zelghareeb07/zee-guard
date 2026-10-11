@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { AddOnOption, AddOns, choice, PricingTier } from "@/types";
 import { Button } from "@/components/ui/button";
 import { AVAILABLE_COLORS } from "@/constants/pricing";
+import { WHATSAPP_INTERNATIONAL_NUMBER } from "@/constants/contact";
 import { inter, oswald } from "@/app/fonts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -360,8 +361,7 @@ export function PricingCard({
 
         {tier.id === "corefit" ? (
           <Button
-            // href={`https://wa.me/201505703992?text=${msg.current}`}
-            href={`https://web.whatsapp.com/send?phone=201505703992&text=${msg}`} // this if Ziad wants web only but then u'll need to datect phones to handle phone application
+            href={`https://web.whatsapp.com/send?phone=${WHATSAPP_INTERNATIONAL_NUMBER}&text=${msg}`}
             variant="solid"
             icon=<FontAwesomeIcon icon={fab.faWhatsapp} className="w-8" />
             className="mt-auto w-full bg-none! bg-emerald-600! shadow-none hover:bg-emerald-600! text-base md:text-xl  whitespace-normal leading-tight h-auto min-h-16 px-3 py-3"

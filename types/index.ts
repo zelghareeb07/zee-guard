@@ -124,6 +124,7 @@ export interface ContactMethod {
 export interface LabLocation {
   name: string;
   address: string[];
+  mapsUrl: string;
 }
 export interface Socials {
   label: string;

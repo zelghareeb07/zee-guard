@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { motion } from "motion/react";
 import clinic from "@/assets/images/clinic.webp";
 import { Container, Section } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
@@ -72,7 +71,7 @@ export default function ContactPage() {
                 >
                   Clinics loacations
                 </h2>
-                <div className="flex  flex-wrap justify-evenly items-center w-full m-auto rounded-2xl overflow-hidden bg-ink-900/80 gap-2">
+                <div className="flex  flex-wrap justify-center lg:justify-evenly items-center w-full m-auto rounded-2xl overflow-hidden bg-ink-900/80 gap-y-2">
                   {LAB_LOCATIONS.map((location, i) => (
                     <LabLocationCard
                       key={`${location.name}-${i}`}

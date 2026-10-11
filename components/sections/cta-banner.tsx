@@ -7,6 +7,7 @@ import { inter, oswald } from "@/app/fonts";
 import { cn } from "@/lib/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { WHATSAPP_LINK } from "@/constants/contact";
 
 interface CtaBannerProps {
   title?: string;
@@ -53,7 +54,7 @@ export function CtaBanner({
           <Button>Create My Own Design</Button>
 
           <Button
-            href="https://wa.me/201124081447"
+            href={WHATSAPP_LINK}
             variant="outline-white"
             icon={
               <span className="w-7 text-[#25D366]">

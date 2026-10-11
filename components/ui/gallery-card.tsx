@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { GalleryDesign } from "@/types";
 import { motion } from "motion/react";
 import FontIcon from "@/components/ui/font-icon";
+import { WHATSAPP_LINK } from "@/constants/contact";
 
 interface GalleryCardProps {
   design: GalleryDesign;
@@ -57,7 +58,7 @@ export function GalleryCard({ design, className }: GalleryCardProps) {
       )}
       {design.categoryId !== "lower-arch-imprints" && (
         <a
-          href={`https://wa.me/201124081447?text=${encodeURIComponent(whatsappMessage)}`}
+          href={`${WHATSAPP_LINK}?text=${encodeURIComponent(whatsappMessage)}`}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`Order ${designName} on WhatsApp`}
