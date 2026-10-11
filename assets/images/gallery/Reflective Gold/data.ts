@@ -34,7 +34,7 @@ const designs = [
   createDesign("reflective-gold-6", "Gold Teeth", goldTeeth),
   createDesign("reflective-gold-7", "Initials", initials),
   createDesign("reflective-gold-8", "MONSTER", monster),
-  createDesign("reflective-gold-9", "Romio Gold", romioGold),
+  createDesign("reflective-gold-9", "Romio", romioGold),
   createDesign("reflective-gold-10", "The Eagle", theEagle),
 ];
 

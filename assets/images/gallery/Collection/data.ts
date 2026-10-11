@@ -103,7 +103,7 @@ const designs = [
   createDesign("collection-41", "Split Name", splitName),
   createDesign("collection-42", "Star", star),
   createDesign("collection-43", "Stylish Name", stylishName),
-  createDesign("collection-44", "TT", tt),
+  createDesign("collection-44", "Cobra", tt),
   createDesign("collection-45", "Tawheed", tawheed),
   createDesign("collection-46", "Tiger", tiger),
   createDesign("collection-47", "Undisputed", undisputed),
