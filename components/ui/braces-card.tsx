@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { AddOnOption, AddOns, choice, TierOption } from "@/types";
 import { AVAILABLE_COLORS } from "@/constants/pricing";
 import { cn } from "@/lib/utils";
@@ -13,7 +13,7 @@ interface BracesCardProps {
   heading: string;
   description: string;
   options: TierOption[];
-  image: string;
+  image: StaticImageData;
   imageAlt: string;
   direction: "left" | "right";
   addOns: AddOns;
@@ -218,7 +218,7 @@ export function BracesCard({
           className={`absolute left-4 top-4 z-10 rounded px-3 py-1 text-xs font-bold uppercase tracking-wide ${
             badgeTone === "blaze"
               ? "bg-blaze-500 text-white"
-              : "bg-white/10 text-white"
+              : "bg-black/90 text-white"
           } ${inter.className}`}
         >
           {badge}

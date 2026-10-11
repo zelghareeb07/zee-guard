@@ -1,143 +1,61 @@
-import img1 from "./1.webp";
-import img2 from "./2.webp";
-import img3 from "./3.webp";
-import img4 from "./4.webp";
-import img5 from "./5.webp";
-import img6 from "./6.webp";
-import img7 from "./7.webp";
-import img8 from "./8.webp";
-import img9 from "./9.webp";
-import img10 from "./10.webp";
-import img11 from "./11.webp";
-import img12 from "./12.webp";
+import bloodyNameSilverFangs from "./Bloody name + Silver Fangs.webp";
+import goldNameWhiteFangs from "./Gold name + White Fangs.webp";
+import initialsWhiteFangs from "./Initials + White Fangs.webp";
+import nameGoldFangsOne from "./Name + Gold Fangs1.webp";
+import nameGoldFangsTwo from "./Name + Gold Fangs2.webp";
+import nameGoldTeeth from "./Name + Gold teeth.webp";
+import nameWhiteTeeth from "./Name + White teeth.webp";
+import numbersGoldFangs from "./Numbers + Gold Fangs.webp";
+import scarfaceGoldFangs from "./Scarface gold fangs.webp";
+import shhhWhiteFangs from "./Shhh + White Fangs.webp";
 
+const createDesign = (
+  id: string,
+  title: string,
+  image: typeof bloodyNameSilverFangs,
+) => ({
+  id,
+  title,
+  subtitle: "",
+  alt: `${title} mouthguard`,
+  tag: `${title} mouthguard`,
+  categoryId: "fangs-and-teeth",
+  image,
+  featured: false,
+  size: "small",
+});
 
 const designs = [
-  {
-    id: "fangs-and-teeth-1",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img1,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "fangs-and-teeth-2",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img2,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "fangs-and-teeth-3",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img3,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "fangs-and-teeth-4",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img4,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "fangs-and-teeth-5",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img5,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "fangs-and-teeth-6",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img6,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "fangs-and-teeth-7",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img7,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "fangs-and-teeth-8",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img8,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "fangs-and-teeth-9",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img9,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "fangs-and-teeth-10",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img10,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "fangs-and-teeth-11",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img11,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "fangs-and-teeth-12",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "fangs-and-teeth",
-    image: img12,
-    featured: false,
-    size: "small",
-  },
+  createDesign(
+    "fangs-and-teeth-1",
+    "Bloody Name + Silver Fangs",
+    bloodyNameSilverFangs,
+  ),
+  createDesign(
+    "fangs-and-teeth-2",
+    "Gold Name + White Fangs",
+    goldNameWhiteFangs,
+  ),
+  createDesign(
+    "fangs-and-teeth-3",
+    "Initials + White Fangs",
+    initialsWhiteFangs,
+  ),
+  createDesign("fangs-and-teeth-4", "Name + Gold Fangs #1", nameGoldFangsOne),
+  createDesign("fangs-and-teeth-5", "Name + Gold Fangs #2", nameGoldFangsTwo),
+  createDesign("fangs-and-teeth-6", "Name + Gold Teeth", nameGoldTeeth),
+  createDesign("fangs-and-teeth-7", "Name + White Teeth", nameWhiteTeeth),
+  createDesign(
+    "fangs-and-teeth-8",
+    "Numbers + Gold Fangs",
+    numbersGoldFangs,
+  ),
+  createDesign(
+    "fangs-and-teeth-9",
+    "Scarface Gold Fangs",
+    scarfaceGoldFangs,
+  ),
+  createDesign("fangs-and-teeth-10", "Shhh! + White Fangs", shhhWhiteFangs),
 ];
 
-export default designs
-  .map((design) => ({
-    ...design,
-    tag: `${design.title || design.id} mouthguard`,
-  }))
-  .sort((a, b) => a.title.localeCompare(b.title));
+export default designs.sort((a, b) => a.title.localeCompare(b.title));

@@ -1,231 +1,113 @@
-import img1 from "./1.webp";
-import img2 from "./2.webp";
-import img3 from "./3.webp";
-import img4 from "./4.webp";
-import img5 from "./5.webp";
-import img6 from "./6.webp";
-import img7 from "./7.webp";
-import img8 from "./8.webp";
-import img9 from "./9.webp";
-import img10 from "./10.webp";
-import img11 from "./11.webp";
-import img12 from "./12.webp";
-import img13 from "./13.webp";
-import img14 from "./14.webp";
-import img15 from "./15.webp";
-import img16 from "./16.webp";
-import img17 from "./17.webp";
-import img18 from "./18.webp";
-import img19 from "./19.webp";
-import img20 from "./20.webp";
+import berserker from "./Berserker.webp";
+import blackBelt from "./Black Belt.webp";
+import bonjourBitches from "./Bonjour Bitches.webp";
+import bruceLee from "./Bruce Lee.webp";
+import butterflyAndStarsOne from "./Butterfly & Stars1.webp";
+import butterflyAndStarsTwo from "./Butterfly & Stars2.webp";
+import cheetah from "./Cheetah.webp";
+import cheetos from "./Cheetos.webp";
+import clawScratches from "./Claw Scratches.webp";
+import crimsonInferno from "./Crimson Inferno.webp";
+import crownedName from "./Crowned Name.webp";
+import deer from "./Deer.webp";
+import fistOne from "./Fist1.webp";
+import fistTwo from "./Fist2.webp";
+import flyHigh from "./Fly High.webp";
+import goat from "./GOAT.webp";
+import girlie from "./Girlie.webp";
+import gladiator from "./Gladiator.webp";
+import gorilla from "./Gorilla.webp";
+import hammer from "./Hammer.webp";
+import karateGirl from "./Karate Girl.webp";
+import karateGiOne from "./KarateGi1.webp";
+import karateGiTwo from "./KarateGi2.webp";
+import knight from "./Knight.webp";
+import legend from "./Legend.webp";
+import lightningOne from "./Lightning1.webp";
+import lightningTwo from "./Lightning2.webp";
+import lit from "./Lit.webp";
+import lolaa from "./Lolaa.webp";
+import midnightSunshine from "./Midnight Sunshine.webp";
+import mouthguardMadnessOne from "./Mouthguard Madness1.webp";
+import mouthguardMadnessTwo from "./Mouthguard Madness2.webp";
+import nameAndEagle from "./Name + Eagle.webp";
+import ojja from "./Ojja.webp";
+import pinkPanther from "./Pink Panther.webp";
+import punchAndKick from "./Punch n Kick.webp";
+import queen from "./Queen.webp";
+import rattleSnake from "./Rattle Snake.webp";
+import skulls from "./Skulls.webp";
+import sniper from "./Sniper.webp";
+import splitName from "./Split Name.webp";
+import star from "./Star.webp";
+import stylishName from "./Stylish Name.webp";
+import tt from "./TT.webp";
+import tawheed from "./Tawheed.webp";
+import tiger from "./Tiger.webp";
+import undisputed from "./Undisputed.webp";
+import viper from "./Viper.webp";
 
+const createDesign = (id: string, title: string, image: typeof berserker) => ({
+  id,
+  title,
+  subtitle: "",
+  alt: `${title} mouthguard`,
+  tag: `${title} mouthguard`,
+  categoryId: "collection",
+  image,
+  featured: false,
+  size: "small",
+});
 
 const designs = [
-  {
-    id: "collection-1",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img1,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-2",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img2,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-3",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img3,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-4",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img4,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-5",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img5,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-6",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img6,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-7",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img7,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-8",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img8,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-9",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img9,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-10",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img10,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-11",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img11,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-12",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img12,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-13",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img13,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-14",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img14,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-15",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img15,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-16",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img16,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-17",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img17,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-18",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img18,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-19",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img19,
-    featured: false,
-    size: "small",
-  },
-  {
-    id: "collection-20",
-    title: "",
-    subtitle: "",
-    tag: "",
-    categoryId: "collection",
-    image: img20,
-    featured: false,
-    size: "small",
-  },
+  createDesign("collection-1", "Berserker", berserker),
+  createDesign("collection-2", "Black Belt", blackBelt),
+  createDesign("collection-3", "Bonjour Bitches", bonjourBitches),
+  createDesign("collection-4", "Bruce Lee", bruceLee),
+  createDesign("collection-5", "Butterfly & Stars #1", butterflyAndStarsOne),
+  createDesign("collection-6", "Butterfly & Stars #2", butterflyAndStarsTwo),
+  createDesign("collection-7", "Cheetah", cheetah),
+  createDesign("collection-8", "Cheetos", cheetos),
+  createDesign("collection-9", "Claw Scratches", clawScratches),
+  createDesign("collection-10", "Crimson Inferno", crimsonInferno),
+  createDesign("collection-11", "Crowned Name", crownedName),
+  createDesign("collection-12", "Deer", deer),
+  createDesign("collection-13", "Fist #1", fistOne),
+  createDesign("collection-14", "Fist #2", fistTwo),
+  createDesign("collection-15", "Fly High", flyHigh),
+  createDesign("collection-16", "GOAT", goat),
+  createDesign("collection-17", "Girlie", girlie),
+  createDesign("collection-18", "Gladiator", gladiator),
+  createDesign("collection-19", "Gorilla", gorilla),
+  createDesign("collection-20", "Hammer", hammer),
+  createDesign("collection-21", "Karate Girl", karateGirl),
+  createDesign("collection-22", "Karate Gi #1", karateGiOne),
+  createDesign("collection-23", "Karate Gi #2", karateGiTwo),
+  createDesign("collection-24", "Knight", knight),
+  createDesign("collection-25", "Legend", legend),
+  createDesign("collection-26", "Lightning #1", lightningOne),
+  createDesign("collection-27", "Lightning #2", lightningTwo),
+  createDesign("collection-28", "Lit", lit),
+  createDesign("collection-29", "Lolaa", lolaa),
+  createDesign("collection-30", "Midnight Sunshine", midnightSunshine),
+  createDesign("collection-31", "Mouthguard Madness #1", mouthguardMadnessOne),
+  createDesign("collection-32", "Mouthguard Madness #2", mouthguardMadnessTwo),
+  createDesign("collection-33", "Name + Eagle", nameAndEagle),
+  createDesign("collection-34", "Ojja", ojja),
+  createDesign("collection-35", "Pink Panther", pinkPanther),
+  createDesign("collection-36", "Punch n Kick", punchAndKick),
+  createDesign("collection-37", "Queen", queen),
+  createDesign("collection-38", "Rattle Snake", rattleSnake),
+  createDesign("collection-39", "Skulls", skulls),
+  createDesign("collection-40", "Sniper", sniper),
+  createDesign("collection-41", "Split Name", splitName),
+  createDesign("collection-42", "Star", star),
+  createDesign("collection-43", "Stylish Name", stylishName),
+  createDesign("collection-44", "TT", tt),
+  createDesign("collection-45", "Tawheed", tawheed),
+  createDesign("collection-46", "Tiger", tiger),
+  createDesign("collection-47", "Undisputed", undisputed),
+  createDesign("collection-48", "Viper", viper),
 ];
 
-export default designs
-  .map((design) => ({
-    ...design,
-    tag: `${design.title || design.id} mouthguard`,
-  }))
-  .sort((a, b) => a.title.localeCompare(b.title));
+export default designs.sort((a, b) => a.title.localeCompare(b.title));

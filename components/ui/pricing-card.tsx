@@ -8,9 +8,9 @@ import { AVAILABLE_COLORS } from "@/constants/pricing";
 import { inter, oswald } from "@/app/fonts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import corefitImage from "@/assets/images/categories/corefit.webp";
-import designFlexImage from "@/assets/images/categories/elite.webp";
-import fusionImage from "@/assets/images/categories/fusion.webp";
+import corefitImage from "@/assets/images/categories/Normal Guards/corefit.webp";
+import designFlexImage from "@/assets/images/categories/Normal Guards/elite.webp";
+import fusionImage from "@/assets/images/categories/Normal Guards/fusion.webp";
 import { motion } from "motion/react";
 import { useCallback, useEffect, useRef, useState } from "react";
 

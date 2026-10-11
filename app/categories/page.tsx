@@ -12,6 +12,8 @@ import {
   ADD_ONS
 } from "@/constants/pricing";
 import { CustomizeGuardButton } from "@/components/ui/CustomizeGuardButton";
+import upperBracesGuard from "@/assets/images/categories/Braces/Upper Jaw.webp"
+import lowerBracesGuard from "@/assets/images/categories/Braces/Lower Jaw.webp"
 
 export const metadata: Metadata = {
   title: "Categories",
@@ -64,7 +66,7 @@ export default function CategoriesPage() {
               heading="Upper Jaw"
               description="Special protection for braces with the possibility of making a lower jaw guard."
               options={UPPER_JAW_OPTIONS}
-              image="/images/braces-upper.svg"
+              image={upperBracesGuard}
               imageAlt="Elite braces upper jaw mouthguard with custom name text"
               direction="left"
               addOns = {ADD_ONS}
@@ -75,7 +77,7 @@ export default function CategoriesPage() {
               heading="Lower Jaw (If Needed)"
               description="Affordable orthodontic protection."
               options={LOWER_JAW_OPTIONS}
-              image="/images/braces-lower.svg"
+              image={lowerBracesGuard}
               imageAlt="CoreFit braces lower jaw mouthguard with custom name text"
               direction="right"
               addOns = {ADD_ONS}

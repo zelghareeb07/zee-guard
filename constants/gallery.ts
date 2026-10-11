@@ -6,6 +6,7 @@ export const DESIGN_CATEGORIES: DesignCategory[] = [
   { id: "half-and-half", label: "Half & Half" },
   { id: "dragons", label: "Dragons" },
   { id: "the-last-airbender", label: "The Last Airbender" },
+  { id: "bloody", label: "Bloody" },
   { id: "collection", label: "Collection" },
   { id: "fangs-and-teeth", label: "Fangs & Teeth" },
   { id: "pharaonic", label: "Pharaonic" },
