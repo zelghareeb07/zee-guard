@@ -9,7 +9,11 @@ import {
   useMemo,
 } from "react";
 import { RotateCcw, Download, Trash2, Type, ImagePlus } from "lucide-react";
-import { FONT_FAMILIES } from "@/app/fonts";
+import {
+  DEFAULT_FONT_FAMILY,
+  FONT_FAMILIES,
+  getFontFamilyOption,
+} from "@/app/fonts";
 import { cn } from "@/lib/utils";
 import {
   CORE_TIERS,
@@ -810,7 +814,7 @@ export function DesignerStudio() {
       rotation: 0,
       text: "TEXT",
       fontSize: 22,
-      fontFamily: FONT_FAMILIES[0]?.name ?? "Impact",
+      fontFamily: DEFAULT_FONT_FAMILY,
       color: BASE_COLORS[0].hex,
     };
     setElements((prev) => [...prev, el]);
@@ -1097,7 +1101,7 @@ export function DesignerStudio() {
     const isArabic = hasArabicText(txt);
     const multiplier = isArabic
       ? 0.9
-      : ["Impact", "Oswald"].includes(getCleanFontName(el.fontFamily ?? ""))
+      : ["Oswald", "Bebas Neue"].includes(getCleanFontName(el.fontFamily ?? ""))
         ? 0.65
         : 0.55;
     const w = txt.length * fs * multiplier;
@@ -1151,12 +1155,16 @@ export function DesignerStudio() {
               unicodeBidi={
                 hasArabicText(el.text ?? "") ? "plaintext" : "normal"
               }
-              fontFamily={
-                hasArabicText(el.text ?? "")
-                  ? "var(--font-noto-arabic), 'Noto Naskh Arabic', serif"
-                  : (el.fontFamily ?? FONT_FAMILIES[0]?.value)
+              fontFamily={getFontFamilyOption(
+                el.fontFamily,
+                hasArabicText(el.text ?? ""),
+              ).family}
+              fontWeight={
+                getFontFamilyOption(
+                  el.fontFamily,
+                  hasArabicText(el.text ?? ""),
+                ).weight
               }
-              fontWeight="bold"
               fontSize={el.fontSize}
               fill={el.color}
               letterSpacing={hasArabicText(el.text ?? "") ? 0 : 2}
@@ -1438,25 +1446,8 @@ export function DesignerStudio() {
     setShowAthleteNameError(false);
     console.log("=== PNG DOWNLOAD START ===");
 
-    const resolveFontName = (fontFamilyValue: string): string => {
-      const varMatch = fontFamilyValue.match(/var\((--font-[^)]+)\)/);
-      if (varMatch) {
-        const varName = varMatch[1];
-        const varMap: Record<string, string> = {
-          "--font-inter": "Inter",
-          "--font-impact": "Impact",
-          "--font-limelight": "Limelight",
-          "--font-oswald": "Oswald",
-          "--font-playfair": "Playfair Display",
-          "--font-dancing": "Dancing Script",
-          "--font-lato": "Lato",
-          "--font-copperplate": "Copperplate Gothic",
-        };
-        return varMap[varName] || "Arial";
-      }
-      const clean = fontFamilyValue.split(",")[0].replace(/["']/g, "").trim();
-      return clean || "Arial";
-    };
+    const resolveFontName = (fontFamilyValue: string): string =>
+      getFontFamilyOption(fontFamilyValue).family;
 
     // RESOLUTION CONTROL
     const resolutionMultiplier = 4; // 1 = standard, 2 = 2x, 3 = 3x, etc.
@@ -1527,22 +1518,19 @@ export function DesignerStudio() {
       } else if (el.type === "text" && el.text) {
         const fontSize = el.fontSize ?? 22;
         const isArabic = hasArabicText(el.text);
-        const fontFamily = isArabic
-          ? "var(--font-noto-arabic), 'Noto Naskh Arabic', serif"
-          : (el.fontFamily ?? "Arial");
-
-        const cleanFont = resolveFontName(fontFamily);
+        const font = getFontFamilyOption(el.fontFamily, isArabic);
+        const cleanFont = font.family;
         console.log(`Drawing text "${el.text}" with font: ${cleanFont}`);
 
-        const fontWeight = "bold";
-        const fontString = `${fontWeight} ${fontSize}px "${cleanFont}"`;
+        const fontString = `${font.weight} ${fontSize}px "${cleanFont}"`;
 
-        await document.fonts.load(fontString);
+        await document.fonts.load(fontString, el.text);
 
         ctx.font = fontString;
-        ctx.textAlign = isArabic ? "right" : "center";
+        ctx.textAlign = "center";
         ctx.direction = isArabic ? "rtl" : "ltr";
         ctx.textBaseline = "middle";
+        ctx.letterSpacing = isArabic ? "0px" : "2px";
         ctx.shadowColor = "transparent";
         ctx.shadowBlur = 0;
         ctx.shadowOffsetX = 0;
@@ -1550,11 +1538,8 @@ export function DesignerStudio() {
         ctx.fillStyle = el.color ?? "#ffffff";
 
         ctx.measureText(el.text);
-        await new Promise((resolve) => setTimeout(resolve, 50));
 
-        const textVerticalOffset = -7;
-        const x = isArabic ? 8 : 0;
-        ctx.fillText(el.text, x, textVerticalOffset);
+        ctx.fillText(el.text, 0, 0);
       }
 
       ctx.restore();

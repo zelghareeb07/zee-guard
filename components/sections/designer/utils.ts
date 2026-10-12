@@ -1,16 +1,11 @@
+import { getFontFamilyOption } from "@/app/fonts";
+
 export function genId() {
   return Math.random().toString(36).slice(2, 9);
 }
 
 export function getCleanFontName(fontName: string): string {
-  const fontMap: Record<string, string> = {
-    Impact: "Impact",
-    "College Block": "Limelight",
-    "American Captain": "Oswald",
-    "Corporate Gothic": "Playfair Display",
-    "Playlist Script": "Dancing Script",
-  };
-  return fontMap[fontName] || "Arial";
+  return getFontFamilyOption(fontName).family;
 }
 
 export function readImageFile(
