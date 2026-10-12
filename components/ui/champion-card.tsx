@@ -26,7 +26,7 @@ export function ChampionCard({ athlete }: { athlete: Athlete }) {
       <div className={cn("flex flex-1 flex-col gap-4 p-6", inter.className)}>
         <h3
           className={cn(
-            "font-display text-[2rem] font-semibold uppercase tracking-wide text-white whitespace-nowrap",
+            "font-display text-[1.2rem] md:text-[2rem] font-semibold uppercase tracking-wide text-white whitespace-nowrap",
             oswald.className,
           )}
         >

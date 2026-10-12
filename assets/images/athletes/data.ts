@@ -45,7 +45,7 @@ export const CHAMPIONS: Athlete[] = [
     "World Games Champion",
     "6 Times African Champion",
     "Head Coach of Mexican National Team",
-    "No.1 of World Ranking",
+    "No.1 in world Ranking",
   ], abdallaMamdouh),
   createAthlete("Youssef Arabawi", "MMA", [
     "Professional MMA fighter",
@@ -70,7 +70,7 @@ export const CHAMPIONS: Athlete[] = [
     "3 times Grand Winner",
     "World Games Champion",
     "African Champion",
-    "No.1 of World Ranking",
+    "No.1 in world Ranking",
   ], tahaTarek),
   createAthlete("Mahmoud Moslhy", "Kickboxing, MMA", [
     "Kickboxing national Champion",
