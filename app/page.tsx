@@ -19,7 +19,7 @@ export default function HomePage() {
       <HowItWorksPreview />
       <DifferenceTable />
       <TestimonialsSection />
-      {/* <Faq /> */}
+      <Faq />
       <CtaBanner />
     </>
   );
