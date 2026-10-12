@@ -30,5 +30,3 @@ npm run lint    # eslint
 | `/how-it-works`    | Six-step process timeline                                       |
 | `/athletes`        | Sponsored athletes, stats, and verified reviews                 |
 | `/contact`         | Contact methods, validated contact form (React Hook Form + Zod), lab locations |
-
-
