@@ -1,56 +1,11 @@
-import { Athlete, StatItem, Testimonial } from "@/types";
-import karamGaber from "@/assets/images/athletes/karam-gaber.webp";
-import zyadElgharib from "@/assets/images/athletes/karam-gaber.webp";
-import ali from "@/assets/images/athletes/karam-gaber.webp";
-import hossam from "@/assets/images/athletes/karam-gaber.webp";
+import { StatItem, Testimonial } from "@/types";
 
+export { CHAMPIONS } from "@/assets/images/athletes/data";
 
 export const ATHLETE_STATS: StatItem[] = [
   { value: 50, label: "National Team champions" },
   { value: 50, label: "Worldwide champions" },
   { value: 100, label: "Professional Grade Rating", isPercent: true },
-];
-
-export const CHAMPIONS: Athlete[] = [
-  {
-    name: "karam gaber",
-    discipline: "Karate",
-    achievements: ["3x National Karate Champion", "Pan-Am Gold Medalist"],
-    quote:
-      "Breathing is everything in the final round. ZeeGuard gives me the oxygen I need while feeling like a concrete wall against impacts.",
-    imageQuery: "male karate athlete national team portrait",
-    img: karamGaber,
-  },
-  {
-    name: "Zyad Elgharib",
-    discipline: "Karate",
-    achievements: ["3x National Karate Champion", "Pan-Am Gold Medalist"],
-    quote:
-      "Breathing is everything in the final round. ZeeGuard gives me the oxygen I need while feeling like a concrete wall against impacts.",
-    imageQuery: "male karate athlete national team portrait",
-    img: zyadElgharib,
-  },
-  {
-    name: "Elias Vance",
-    discipline: "Pro MMA",
-    achievements: [
-      "Current Light-Heavyweight Champ",
-      "12-0 Undefeated Pro Record",
-    ],
-    quote:
-      "I don't step into the cage without it. The custom fit locks in tight, and I don't even realize it's there until it takes a knee for me.",
-    imageQuery: "male mma fighter karate gi portrait smiling",
-    img: ali,
-  },
-  {
-    name: "Ali hossam",
-    discipline: "Boxing",
-    achievements: ["2x Golden Gloves Winner", "Olympic Qualifier"],
-    quote:
-      "Communication with my corner is crucial. ZeeGuard's slim profile lets me speak clearly between rounds without removing it.",
-    imageQuery: "female boxer portrait dreadlocks black and white",
-    img: hossam
-  },
 ];
 
 export const ATHLETE_TESTIMONIALS: Testimonial[] = [

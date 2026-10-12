@@ -66,16 +66,6 @@ export default function AthletesPage() {
       <Section tone="raised">
         <Container className="flex flex-col gap-10" >
           <TestimonialsSection tone="raised"/>
-         
-          {/* <SectionHeading
-            title="The Verdict"
-            subtitle="Real feedback from fighters who demand the best."
-          />
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-            {ATHLETE_TESTIMONIALS.map((t) => (
-              <VerdictCard key={t.name} testimonial={t} />
-            ))}
-          </div> */}
         </Container>
       </Section>
 

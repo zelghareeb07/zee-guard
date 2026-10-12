@@ -108,8 +108,7 @@ export interface Athlete {
   name: string;
   discipline: string;
   achievements: string[];
-  quote: string;
-  imageQuery: string;
+  quote?: string;
   img: StaticImageData;
 }
 

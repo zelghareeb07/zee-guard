@@ -45,7 +45,7 @@ export function GalleryCard({ design, className }: GalleryCardProps) {
           }
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
-          className="object-contain transition-all duration-500 brightness-120 group-hover:brightness-130 group-hover:scale-105"
+          className="object-contain transition-all duration-500  group-hover:brightness-110 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-linear-to-t from-black/40 via-black/10 to-transparent" />
         <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/10 to-transparent" />
