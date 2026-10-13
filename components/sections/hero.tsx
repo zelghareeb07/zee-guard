@@ -38,7 +38,7 @@ export function Hero() {
           variants={reveal}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
         >
-          Custom Protection For
+          ZeeGuard Custom Mouthguards for
           <br />
           <span className="text-blaze-500">Elite Fighters</span>
         </motion.h1>
