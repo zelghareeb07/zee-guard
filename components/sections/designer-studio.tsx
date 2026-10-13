@@ -80,7 +80,6 @@ export function DesignerStudio() {
 
   const findModelOption = useCallback((selectedModel: string) => {
     const normalized = selectedModel.replace("(Braces)", "").trim();
-    console.log("normalized ", normalized);
 
     if (!normalized) return null;
 
@@ -100,7 +99,6 @@ export function DesignerStudio() {
   const getPriceForModel = useCallback(
     (selectedModel: string) => {
       const match = findModelOption(selectedModel);
-      console.log(match);
 
       return match?.price ?? 0;
     },
@@ -240,7 +238,6 @@ export function DesignerStudio() {
         Boolean((sessionStorage.getItem("Lower tier") || "").trim()));
 
     const basePrice = getPriceForModel(upperTierName || model);
-    console.log(basePrice);
 
     const lowerPrice =
       (isBracesSelection ||
@@ -248,9 +245,8 @@ export function DesignerStudio() {
         isBracesUpperModel(upperTierName)) &&
       hasLowerBraceSelection &&
       activeLowerModel
-        ? getPriceForModel(activeLowerModel)
-        : 0;
-    console.log(lowerPrice);
+      ? getPriceForModel(activeLowerModel)
+      : 0;
 
     const upperAddOnEntries = Object.entries(upperAddOnSelections).filter(
       ([key]) => !(hasLowerBraceSelection && key === "lowerFit"),
@@ -1441,9 +1437,8 @@ export function DesignerStudio() {
       });
       return;
     }
-
     setShowAthleteNameError(false);
-    console.log("=== PNG DOWNLOAD START ===");
+
 
     const resolveFontName = (fontFamilyValue: string): string =>
       getFontFamilyOption(fontFamilyValue).family;
@@ -1519,7 +1514,6 @@ export function DesignerStudio() {
         const isArabic = hasArabicText(el.text);
         const font = getFontFamilyOption(el.fontFamily, isArabic);
         const cleanFont = font.family;
-        console.log(`Drawing text "${el.text}" with font: ${cleanFont}`);
 
         const fontString = `${font.weight} ${fontSize}px "${cleanFont}"`;
 

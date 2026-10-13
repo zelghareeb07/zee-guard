@@ -25,7 +25,13 @@ export const metadata: Metadata = {
     siteName: "ZeeGuard",
     type: "website",
     url: "https://www.zee-guard.com/",
-    images: ["/images/Logo.webp"],
+    images: [
+			{
+				url: "https://www.zee-guard.com/images/Logo.webp",
+				width: 1200,
+				height: 628
+			}
+		]
   },
   twitter: {
     card: "summary",

@@ -66,8 +66,6 @@ export function PricingCard({
     optionPrice: number,
     thickness: string,
   ) => {
-    console.log(optionName);
-
     setSelectedData({
       optionName: optionName,
       optionPrice: optionPrice,
@@ -128,9 +126,6 @@ export function PricingCard({
     sessionStorage.setItem(`${storagePrefix}Thickness`, thickness);
     sessionStorage.setItem("tier", tierName);
     sessionStorage.setItem("thickness", thickness);
-
-    const chosenTier = sessionStorage.getItem(`${storagePrefix}Tier`);
-    if (chosenTier) console.log(chosenTier);
   }
 
   const setWhatsappMsg = useCallback(() => {
@@ -153,10 +148,6 @@ export function PricingCard({
       addOnStorageKey,
       JSON.stringify(selectedData.addOns),
     );
-
-    console.log(encodeURIComponent(msg));
-    console.log(chosenColor);
-    console.log(chosenTier);
   }, [chosenColor, chosenTier, selectedData.addOns, tier.id, msg, setWhatsappMsg]);
 
   return (

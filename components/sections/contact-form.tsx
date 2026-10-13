@@ -22,11 +22,10 @@ export function ContactForm() {
     resolver: zodResolver(contactFormSchema),
   });
 
-  const onSubmit = async (values: ContactFormValues) => {
+  const onSubmit = async () => {
     // No backend is wired up yet — simulate a network request so the
     // form's success state can be demonstrated end to end.
     await new Promise((resolve) => setTimeout(resolve, 600));
-    console.log("Contact form submitted:", values);
     setSubmitted(true);
     reset();
   };
