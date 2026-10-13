@@ -1,6 +1,7 @@
 import batmanVsSuperman from "./Batman v Superman.webp";
 import prettyFierce from "./Pretty Fierce.webp";
 import sweetAndSinister from "./Sweet & Sinister.webp";
+import fox from "./FOX.webp";
 
 const createDesign = (id: string, title: string, image: typeof batmanVsSuperman) => ({
   id,
@@ -25,6 +26,11 @@ const designs = [
     "half-and-half-sweet-and-sinister",
     "Sweet & Sinister",
     sweetAndSinister,
+  ),
+  createDesign(
+    "half-and-half-fox",
+    "fox",
+    fox,
   ),
 ];
 

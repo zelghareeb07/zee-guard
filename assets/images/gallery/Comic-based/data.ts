@@ -1,4 +1,5 @@
 import batmanVsSuperman from "./Batman vs Superman.webp";
+import deadpoolBundle from "./Deadpool Bundle.webp";
 import deadpoolMaximumEffort from "./Deadpool Maximum Effort.webp";
 import deadpoolMercWithAMouth from "./Deadpool Merc with a mouth.webp";
 import deadpoolUnprofessionallyDangerous from "./Deadpool Unprofessionally dangerous.webp";
@@ -32,6 +33,11 @@ const designs = [
     "comic-based-batman-v-superman",
     "batman v superman",
     batmanVsSuperman,
+  ),
+  createDesign(
+    "comic-based-deadpool-bundle",
+    "Deadpool Bundle",
+    deadpoolBundle,
   ),
   createDesign(
     "comic-based-deadpool-maximum-effort",
