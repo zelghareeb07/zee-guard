@@ -352,7 +352,7 @@ export function PricingCard({
 
         {tier.id === "corefit" ? (
           <Button
-            href={`https://web.whatsapp.com/send?phone=${WHATSAPP_INTERNATIONAL_NUMBER}&text=${msg}`}
+            href={`https://wa.me/${WHATSAPP_INTERNATIONAL_NUMBER}?text=${msg}`}
             variant="solid"
             icon=<FontAwesomeIcon icon={fab.faWhatsapp} className="w-8" />
             className="mt-auto w-full bg-none! bg-emerald-600! shadow-none hover:bg-emerald-600! text-base md:text-xl  whitespace-normal leading-tight h-auto min-h-16 px-3 py-3"
