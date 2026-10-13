@@ -1,3 +1,3 @@
-import navBarLogo from "@/public/images/Logo.webp";
+import navBarLogo from "@/public/Logo.webp";
 
 export { navBarLogo };

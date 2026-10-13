@@ -19,6 +19,7 @@ import xenos from "./Xenos.webp";
 import yassinAhmed from "./Yassin Ahmed.webp";
 import youssefArabawi from "./Youssef Arabawi.webp";
 import zyadElgharib from "./Zyad Elgharib.webp";
+import youssefBadawy from "./Youssef Badawy.webp";
 import type { Athlete } from "@/types";
 
 const createAthlete = (
@@ -47,6 +48,7 @@ export const CHAMPIONS: Athlete[] = [
     "Head Coach of Mexican National Team",
     "No.1 in world Ranking",
   ], abdallaMamdouh),
+  createAthlete("Youssef Badawy", "Karate", ["No. 1 All time world ranking.", "Three-time World Champion.", "Two-time Grand Winner.", "Three-time African Champion.", "World, African & Mediterranean Games Champion."], youssefBadawy),
   createAthlete("Youssef Arabawi", "MMA", [
     "Professional MMA fighter",
     "PFLmena Fighter",
@@ -72,10 +74,29 @@ export const CHAMPIONS: Athlete[] = [
     "African Champion",
     "No.1 in world Ranking",
   ], tahaTarek),
+  createAthlete("Khaled Salah", "MMA, Kung Fu, Wrestling", [
+    "Professional MMA fighter",
+    "Egyptian national MMA team Coach",
+    "National Wrestling Champion",
+    "National Kung Fu champion",
+    "MMA Head Coach",
+  ], khaledSalah),
   createAthlete("Mahmoud Moslhy", "Kickboxing, MMA", [
     "Kickboxing national Champion",
     "Amateur MMA fighter",
   ], mahmoudMoslhy),
+  createAthlete("Yassin Ahmed", "Karate", [
+    "World Champion",
+    "African Champion",
+  ], yassinAhmed),
+  createAthlete("Seifeldeen Shreen", "Karate", [
+    "North African Champion",
+    "National Karate Team player",
+  ], seifeldeenShreen),
+  createAthlete("Hassan Awad", "Karate", [
+    "African & Mediterranean Champion",
+    "Egyptian Karate National Team",
+  ], hassanAwad),
   createAthlete("Abdelrahman Younis", "Karate", [
     "Qatari National Team",
   ], abdelrahmanYounis),
@@ -86,26 +107,7 @@ export const CHAMPIONS: Athlete[] = [
     "Mediterranean Champions",
   ], christosAndAntonis),
   createAthlete("Ektoras", "Karate", ["Mediterranean Champion"], ektoras),
-  createAthlete("Hassan Awad", "Karate", [
-    "African & Mediterranean Champion",
-    "Egyptian Karate National Team",
-  ], hassanAwad),
-  createAthlete("Khaled Salah", "MMA, Kung Fu, Wrestling", [
-    "Professional MMA fighter",
-    "Egyptian national MMA team Coach",
-    "National Wrestling Champion",
-    "National Kung Fu champion",
-    "MMA Head Coach",
-  ], khaledSalah),
   createAthlete("Mido", "MMA", ["Amateur MMA fighter"], mido),
-  createAthlete("Seifeldeen Shreen", "Karate", [
-    "North African Champion",
-    "National Karate Team player",
-  ], seifeldeenShreen),
   createAthlete("The Eagle", "MMA", ["Amateur MMA fighter"], theEagle),
-  createAthlete("Yassin Ahmed", "Karate", [
-    "World Champion",
-    "African Champion",
-  ], yassinAhmed),
   createAthlete("Wally", "MMA", [], wally),
 ];
