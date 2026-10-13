@@ -102,7 +102,7 @@ export const CHAMPIONS: Athlete[] = [
   ], abdelrahmanYounis),
   createAthlete("Adham", "Karate", ["National Champion"], adham),
   createAthlete("Alaa Kichou", "Karate", ["African Champion"], alaaKichou),
-  createAthlete("Baher", "Karate", ["Amateur MMA fighter"], baher),
+  createAthlete("Baher", "MMA", ["Amateur MMA fighter"], baher),
   createAthlete("Christos & Antonis", "Karate", [
     "Mediterranean Champions",
   ], christosAndAntonis),
