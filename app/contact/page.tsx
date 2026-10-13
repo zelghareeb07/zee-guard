@@ -12,6 +12,7 @@ import { inter, oswald } from "../fonts";
 
 export const metadata: Metadata = {
   title: "Contact Us",
+  alternates: { canonical: "/contact" },
   description:
     "Connect with the ZeeGuard performance lab to start your custom mouthguard fitting process today.",
 };

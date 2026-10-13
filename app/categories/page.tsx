@@ -17,6 +17,7 @@ import lowerBracesGuard from "@/assets/images/categories/Braces/Lower Jaw.webp"
 
 export const metadata: Metadata = {
   title: "Categories",
+  alternates: { canonical: "/categories" },
   description:
     "Precision engineered dental protection. From training essentials to professional grade armor, find the ZeeGuard tier that fits your game.",
 };

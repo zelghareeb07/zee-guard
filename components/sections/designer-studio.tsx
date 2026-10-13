@@ -864,7 +864,6 @@ export function DesignerStudio() {
   const isFusionSelected =
     !isBracesSelection && model.toLowerCase().includes("fusion");
   const isEliteEssentialSelected = isEliteEssentialModel(model);
-  const isBestSellerModel = isEliteUltimateModel(model);
   const hasSelectedLowerGuard =
     includeLowerGuard && isBracesSelection;
 
@@ -1893,7 +1892,7 @@ export function DesignerStudio() {
   };
 
   return (
-    <div className="grid grid-cols-1 gap-4 pt-10 lg:grid-cols-[1.1fr_1fr] lg:gap-6 lg:pt-20">
+    <div className="grid grid-cols-1 gap-4  lg:grid-cols-[1.1fr_1fr] lg:gap-6 ">
       {/* Preview */}
       <div className="flex h-[55vh] min-h-70 flex-col gap-1 rounded-xl border border-white/10 bg-ink-900 px-2 py-3 lg:h-200 lg:p-8">
         <div className="flex flex-col items- justify-between">

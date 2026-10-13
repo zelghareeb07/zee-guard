@@ -7,6 +7,7 @@ import { oswald } from "../fonts";
 
 export const metadata: Metadata = {
   title: "Gallery",
+  alternates: { canonical: "/gallery" },
   description:
     "Explore ZeeGuard's elite gallery of performance-engineered mouthguard designs, from anime and gaming to fully custom artwork.",
 };

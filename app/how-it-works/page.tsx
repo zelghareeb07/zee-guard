@@ -6,6 +6,7 @@ import { PageHeader } from "@/components/sections/page-header";
 
 export const metadata: Metadata = {
   title: "How It Works",
+  alternates: { canonical: "/how-it-works" },
   description:
     "From concept to combat. Understanding how ZeeGuard engineers the ultimate defensive equipment for elite athletes.",
 };

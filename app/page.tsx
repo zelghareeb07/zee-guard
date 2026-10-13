@@ -10,8 +10,22 @@ import { CtaBanner } from "@/components/sections/cta-banner";
 
 
 export default function HomePage() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "ZeeGuard",
+    url: "https://www.zee-guard.com/",
+    logo: "https://www.zee-guard.com/images/Logo.webp",
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema).replace(/</g, "\\u003c"),
+        }}
+      />
       <Hero />
       <WhyChoose />
       <TrustStats />

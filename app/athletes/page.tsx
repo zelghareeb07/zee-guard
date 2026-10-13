@@ -14,6 +14,7 @@ import Counter from "@/components/ui/counter";
 
 export const metadata: Metadata = {
   title: "Athletes",
+  alternates: { canonical: "/athletes" },
   description:
     "Trusted by national-level athletes. See the champions who wear ZeeGuard in the octagon, the ring, and on the mat.",
 };

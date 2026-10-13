@@ -8,9 +8,13 @@ import SocilaMediaIcons from "@/components/ui/socialMediaIcons";
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.zee-guard.com"),
   title: {
     default: "ZeeGuard",
     template: "%s | ZeeGuard",
+  },
+  alternates: {
+    canonical: "/",
   },
   description:
     "Dentist-made custom-fit mouthguards trusted by national-level athletes in Karate, MMA, Boxing and Kickboxing.",
@@ -20,6 +24,15 @@ export const metadata: Metadata = {
       "Dentist-made custom-fit mouthguards trusted by national-level athletes in Karate, MMA, Boxing and Kickboxing.",
     siteName: "ZeeGuard",
     type: "website",
+    url: "https://www.zee-guard.com/",
+    images: ["/images/Logo.webp"],
+  },
+  twitter: {
+    card: "summary",
+    title: "ZeeGuard | Custom Protection for Elite Fighters",
+    description:
+      "Dentist-made custom-fit mouthguards trusted by national-level athletes in Karate, MMA, Boxing and Kickboxing.",
+    images: ["/images/Logo.webp"],
   },
 };
 
