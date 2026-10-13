@@ -5,6 +5,7 @@ import { fontVariables } from './fonts';
 import "./globals.css";
 import ScrollToTopButton from "@/components/ui/up-button";
 import SocilaMediaIcons from "@/components/ui/socialMediaIcons";
+import { Analytics } from "@vercel/analytics/next"
 
 
 export const metadata: Metadata = {
@@ -53,6 +54,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">
           {children}
+          <Analytics/>
           </main>
         <ScrollToTopButton/>
         <SocilaMediaIcons/>
