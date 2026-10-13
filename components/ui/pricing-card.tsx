@@ -74,7 +74,7 @@ export function PricingCard({
     });
 
     // setting color to transparent if coreshield is chosen for the ones don't have color and black for the one having colors
-    if (optionName.toLowerCase().includes("colorshield")) {
+    if (optionName.toLowerCase().includes("CoreFit - Essential #2".toLowerCase())) {
       setChosenColor("Black");
     } else {
       setChosenColor("Transparent");
