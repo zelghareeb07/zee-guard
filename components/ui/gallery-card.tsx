@@ -52,7 +52,7 @@ export function GalleryCard({ design, className }: GalleryCardProps) {
       </div>
 
       {design.title && (
-        <span className="absolute left-4 top-4 rounded-sm bg-gold-500 px-3 py-1 text-xs font-bold uppercase tracking-wide text-ink-950">
+        <span className="absolute left-4 top-4 rounded-sm bg-gold-500 px-3 py-1 text-[10px] md:text-xs font-semibold uppercase tracking-wide text-ink-950">
           {design.title}
         </span>
       )}
@@ -66,7 +66,7 @@ export function GalleryCard({ design, className }: GalleryCardProps) {
           className="absolute bottom-3 right-3 z-10 flex h-11 items-center justify-center gap-2 rounded-full border border-white/15 bg-black/75 px-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_4px_14px_rgba(0,0,0,0.4)] backdrop-blur-xl transition-all duration-200 hover:border-white/25 hover:bg-black/90 hover:shadow-[0_4px_14px_rgba(0,0,0,0.5)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blaze-400"
         >
           <FontIcon fontIcon="whatsapp" className="" />
-          <span className="text-xs font-bold uppercase tracking-wide text-white">
+          <span className="text-[10px] md:text-xs font-semibold uppercase tracking-wide text-white">
             Order {designName}
           </span>
         </a>
