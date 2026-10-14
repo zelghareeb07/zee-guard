@@ -16,7 +16,7 @@ const reveal = {
 };
 
 export function CategoryPreview() {
-  const [activeId, setActiveId] = useState("dragons");
+  const [activeId, setActiveId] = useState("comic-based");
 
   const filtered = useMemo(
     () => GALLERY_DESIGNS.filter((d) => d.categoryId === activeId),
