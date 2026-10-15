@@ -1912,7 +1912,7 @@ export function DesignerStudio() {
               viewBox="-15 0 550 160"
               width={550}
               height={160}
-              className="h-full w-full touch-none select-none drop-shadow-[0_0_30px_rgba(226,34,43,0.25)]"
+              className="h-full w-full touch-pan-y select-none drop-shadow-[0_0_30px_rgba(226,34,43,0.25)]"
               onMouseDown={() => setSelectedId(null)}
             >
               <defs>
