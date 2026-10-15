@@ -55,7 +55,7 @@ export default function ContactPage() {
                 src={clinic}
                 alt="ZeeGuard clinics locations"
                 fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
+                sizes="100vw"
                 className="object-cover z-8"
               />
               <div

@@ -106,7 +106,7 @@ export function TestimonialsSection({ tone = "base" }: { tone?: "base" | "raised
                           src={photo}
                           alt={`ZeeGuard testimonial photo ${index + 1}`}
                           fill
-                          sizes="(max-width: 640px) 68vw, (max-width: 1024px) 256px, 288px"
+                          sizes="(max-width: 1023px) 240px, 272px"
                           unoptimized={unoptimizedTestimonialPhotos.includes(photo)}
                           className="object-contain"
                           draggable={false}

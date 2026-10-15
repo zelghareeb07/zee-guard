@@ -60,6 +60,7 @@ export function Hero() {
               alt="ZeeGuard custom-fit mouthguard, black with silver crest logo"
               width={900}
               height={600}
+              sizes="(max-width: 639px) 100vw, 512px"
               priority
               className="w-full drop-shadow-[0_0_30px_rgba(255,0,0,0.25)]"
             />

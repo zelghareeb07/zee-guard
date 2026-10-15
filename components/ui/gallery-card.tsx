@@ -44,7 +44,7 @@ export function GalleryCard({ design, className }: GalleryCardProps) {
             `${design.title} — custom mouthguard design, ${design.subtitle}`
           }
           fill
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes="(max-width: 1023px) 100vw, 33vw"
           unoptimized={design.unoptimized}
           className="object-contain transition-all duration-500  group-hover:brightness-110 group-hover:scale-105"
         />

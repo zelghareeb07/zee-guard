@@ -187,7 +187,7 @@ export function PricingCard({
             src={IMAGE_MAP[tier.id] ?? "/images/tier-corefit.svg"}
             alt={`${tier.name} mouthguard product preview`}
             fill
-            sizes="(max-width: 1024px) 100vw, 33vw"
+            sizes="(max-width: 1023px) 100vw, 33vw"
             unoptimized={!IMAGE_MAP[tier.id]}
             className="object-cover"
           />

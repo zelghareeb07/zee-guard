@@ -17,7 +17,7 @@ export function ChampionCard({ athlete }: { athlete: Athlete }) {
           src={athlete.img}
           alt={`${athlete.name}, ${athlete.discipline} athlete sponsored by ZeeGuard`}
           fill
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes="(max-width: 639px) 85vw, (max-width: 1023px) 46vw, 31vw"
           className="object-cover object-top "
         />
         <div className="absolute inset-0 bg-linear-to-t from-1 from-black/60 to-transparent" />
