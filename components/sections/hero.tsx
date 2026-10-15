@@ -8,6 +8,7 @@ import { Container } from "@/components/ui/container";
 import { HERO_BADGES } from "@/constants/home";
 import { cn } from "@/lib/utils";
 import { oswald, inter } from "@/app/fonts";
+import logoBlack from "@/assets/images/logo-black.webp";
 
 const reveal = {
   hidden: { opacity: 0, y: 28 },
@@ -55,7 +56,7 @@ export function Hero() {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
           >
             <Image
-              src="/images/logo-black.webp"
+              src={logoBlack}
               alt="ZeeGuard custom-fit mouthguard, black with silver crest logo"
               width={900}
               height={600}
