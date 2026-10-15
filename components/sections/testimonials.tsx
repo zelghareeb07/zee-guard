@@ -7,7 +7,10 @@ import { SectionHeading } from "@/components/ui/typography";
 import { inter } from "@/app/fonts";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { testimonialPhotos } from "@/assets/images/image";
+import {
+  testimonialPhotos,
+  unoptimizedTestimonialPhotos,
+} from "@/assets/images/image";
 
 export function TestimonialsSection({ tone = "base" }: { tone?: "base" | "raised" }) {
   const photoTrackRef = useRef<HTMLDivElement>(null);
@@ -104,6 +107,7 @@ export function TestimonialsSection({ tone = "base" }: { tone?: "base" | "raised
                           alt={`ZeeGuard testimonial photo ${index + 1}`}
                           fill
                           sizes="(max-width: 640px) 68vw, (max-width: 1024px) 256px, 288px"
+                          unoptimized={unoptimizedTestimonialPhotos.includes(photo)}
                           className="object-contain"
                           draggable={false}
                         />

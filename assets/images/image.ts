@@ -28,3 +28,8 @@ export const testimonialPhotos = [
   whatsappOctober9At9_09_46,
   whatsappOctober9At9_09_47,
 ];
+
+export const unoptimizedTestimonialPhotos = [
+  whatsappJuly3,
+  whatsappJuly5,
+];

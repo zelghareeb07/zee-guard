@@ -188,6 +188,7 @@ export function PricingCard({
             alt={`${tier.name} mouthguard product preview`}
             fill
             sizes="(max-width: 1024px) 100vw, 33vw"
+            unoptimized={!IMAGE_MAP[tier.id]}
             className="object-cover"
           />
         </div>

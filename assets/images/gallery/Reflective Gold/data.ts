@@ -23,7 +23,10 @@ const createDesign = (id: string, title: string, image: typeof falcon) => ({
 
 const designs = [
   createDesign("reflective-gold-1", "Falcon", falcon),
-  createDesign("reflective-gold-2", "Gold Initial", goldInitial),
+  {
+    ...createDesign("reflective-gold-2", "Gold Initial", goldInitial),
+    unoptimized: true,
+  },
   createDesign("reflective-gold-3", "Gold Spots", goldSpots),
   createDesign(
     "reflective-gold-4",
@@ -32,7 +35,10 @@ const designs = [
   ),
   createDesign("reflective-gold-5", "Gold Name", goldName),
   createDesign("reflective-gold-6", "Gold Teeth", goldTeeth),
-  createDesign("reflective-gold-7", "Initials", initials),
+  {
+    ...createDesign("reflective-gold-7", "Initials", initials),
+    unoptimized: true,
+  },
   createDesign("reflective-gold-8", "MONSTER", monster),
   createDesign("reflective-gold-9", "Romio", romioGold),
   createDesign("reflective-gold-10", "The Eagle", theEagle),

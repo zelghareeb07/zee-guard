@@ -30,6 +30,7 @@ export interface GalleryDesign {
   tag?: string;
   categoryId: string;
   image: string | StaticImageData;
+  unoptimized?: boolean;
   featured?: boolean;
   size?: string;
 }
