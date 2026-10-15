@@ -1589,7 +1589,7 @@ export function DesignerStudio() {
 
     // --- MAIN INFO PANEL (Left Column) ---
     // Draw semi-transparent background panel
-    const panelWidth = 490 * resolutionMultiplier;
+    const panelWidth = 510 * resolutionMultiplier;
     const panelHeight = 190 * resolutionMultiplier;
     ctx.save();
     ctx.shadowColor = "rgba(0,0,0,0.3)";
@@ -1694,7 +1694,7 @@ export function DesignerStudio() {
       // Position the text info box to the right of the main panel
       const textBoxX = infoX + panelWidth + 30 * resolutionMultiplier;
       const textBoxY = infoY - 20 * resolutionMultiplier;
-      const textBoxWidth = 300 * resolutionMultiplier;
+      const textBoxWidth = 320 * resolutionMultiplier;
       const textBoxHeight = panelHeight;
 
       ctx.save();
