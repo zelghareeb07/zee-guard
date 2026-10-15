@@ -2108,7 +2108,8 @@ export function DesignerStudio() {
                           type="number"
                           min="8"
                           max="120"
-                          value={selectedEl.fontSize || 22}
+                          step="0.01"
+                          value={Number(selectedEl.fontSize || 22).toFixed(2)}
                           onChange={(e) =>
                             updateEl(selectedEl.id, {
                               fontSize: Number(e.target.value),
@@ -2202,7 +2203,8 @@ export function DesignerStudio() {
                   <div className="number-wrapper">
                     <input
                       type="number"
-                      value={selectedEl.rotation || 0}
+                      step="0.01"
+                      value={Number(selectedEl.rotation || 0).toFixed(2)}
                       onChange={(e) =>
                         updateEl(selectedEl.id, {
                           rotation: Number(e.target.value),

@@ -30,7 +30,7 @@ const IMAGE_MAP: Record<string, StaticImageData> = {
 const COLOR_SWATCH: Record<string, string> = {
   Black: "bg-black",
   White: "bg-white",
-  Blue: "bg-blue-600",
+  Blue: "bg-[#01298e]",
   Pink: "bg-pink-500",
   Green: "bg-emerald-500",
 };

@@ -14,7 +14,7 @@ export const THICKNESSES = ["3mm", "4mm", "5mm", "6mm"] as const;
 export const BASE_COLORS = [
   { name: "White", hex: "#ffffff" },
   { name: "Black", hex: "#000000" },
-  { name: "Blue", hex: "#2563eb" },
+  { name: "Blue", hex: "#01298e" },
   { name: "Green", hex: "#16a34a" },
   { name: "Pink", hex: "#ec4899" },
   { name: "Transparent", hex: "transparent" },
