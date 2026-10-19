@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   description:
-    "Dentist-made custom-fit mouthguards trusted by national-level athletes in Karate, MMA, Boxing and Kickboxing.",
+    "Dentist-made custom-fit mouthguards trusted by International-level athletes in Karate, MMA, Boxing and Kickboxing.",
   openGraph: {
     title: "ZeeGuard | Custom Protection for Elite Fighters",
     description:
-      "Dentist-made custom-fit mouthguards trusted by national-level athletes in Karate, MMA, Boxing and Kickboxing.",
+      "Dentist-made custom-fit mouthguards trusted by International-level athletes in Karate, MMA, Boxing and Kickboxing.",
     siteName: "ZeeGuard",
     type: "website",
     url: "https://www.zee-guard.com/",
