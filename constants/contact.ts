@@ -30,14 +30,14 @@ export const CONTACT_METHODS: ContactMethod[] = [
 
 export const LAB_LOCATIONS: LabLocation[] = [
   {
-    name: "Dental Hub Center",
-    address: ["11 Ibn Hokal st", "Zezenia, Alexandria"],
-    mapsUrl: "https://maps.app.goo.gl/TDHqQRjTXxucbUNy8",
-  },
-  {
     name: "Hamouda Clinic",
     address: ["274 Malak Hifny Bahary st", "Emam Huda El Eslam, Sidi Bishr, Alexandria"],
     mapsUrl: "https://maps.app.goo.gl/ZKAkgme6MNKdrXew8",
+  },
+  {
+    name: "Dental Hub Center",
+    address: ["11 Ibn Hokal st", "Zezenia, Alexandria"],
+    mapsUrl: "https://maps.app.goo.gl/TDHqQRjTXxucbUNy8",
   },
   {
     name: "1,2,3 Smile",
@@ -49,11 +49,11 @@ export const LAB_LOCATIONS: LabLocation[] = [
     address: ["7th Garanada st", "El-Montaza, Heliopolis, Cairo"],
     mapsUrl: "https://maps.app.goo.gl/cn7kPuSSRZRnj99d7",
   },
-  {
-    name: "The Paramount Clinic",
-    address: ["49 Misr Helwan Agriculture Rd", "Maadi Al Khabiri Al Gharbeyah, Maadi, Cairo"],
-    mapsUrl: "https://maps.app.goo.gl/yuqGgtpRVvrbUuRSA",
-  },
+  // {
+  //   name: "The Paramount Clinic",
+  //   address: ["49 Misr Helwan Agriculture Rd", "Maadi Al Khabiri Al Gharbeyah, Maadi, Cairo"],
+  //   mapsUrl: "https://maps.app.goo.gl/yuqGgtpRVvrbUuRSA",
+  // },
   {
     name: "Elsawi Dental Clinic",
     address: ["Al Nakhil Center 2, Street 4", "11th District, 6th of October City, Giza"],

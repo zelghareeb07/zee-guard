@@ -72,11 +72,12 @@ export default function ContactPage() {
                 >
                   Clinics loacations
                 </h2>
-                <div className="flex  flex-wrap justify-center lg:justify-evenly items-center w-full m-auto rounded-2xl overflow-hidden bg-ink-900/80 gap-y-2">
+                <div className="flex md:divide-x-3 flex-wrap justify-center lg:justify-evenly items-center w-full m-auto rounded-2xl overflow-hidden bg-ink-900/80 gap-y-2">
                   {LAB_LOCATIONS.map((location, i) => (
                     <LabLocationCard
                       key={`${location.name}-${i}`}
                       location={location}
+                      
                     />
                   ))}
                 </div>

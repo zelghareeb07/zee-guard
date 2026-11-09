@@ -3,7 +3,7 @@ import { LabLocation } from "@/types";
 
 export function LabLocationCard({ location }: { location: LabLocation }) {
   return (
-    <div className="flex flex-col gap-4 border-white/10 py-6 px-8 w-full md:w-1/2 lg:w-1/3 ">
+    <div className=" flex flex-col  gap-4 border-white/10 py-6 px-8 w-full md:w-1/2 lg:w-1/3 ">
       <div className="flex items-center gap-2 text-base  text-stone">
         <Building2 size={16} className="text-blaze-500" aria-hidden />
         {location.name}
