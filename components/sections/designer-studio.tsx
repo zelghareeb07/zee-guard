@@ -8,7 +8,14 @@ import {
   useCallback,
   useMemo,
 } from "react";
-import { RotateCcw, Download, Trash2, Type, ImagePlus } from "lucide-react";
+import {
+  RotateCcw,
+  Download,
+  Trash2,
+  Type,
+  ImagePlus,
+  ChevronDown,
+} from "lucide-react";
 import {
   DEFAULT_FONT_FAMILY,
   FONT_FAMILIES,
@@ -2170,28 +2177,97 @@ export function DesignerStudio() {
                     </div>
                   </div>
                   <div>
-                    <label className="text-xs font-semibold uppercase tracking-wide text-steel-400">
-                      Font Family
-                    </label>
-                    <select
-                      value={selectedEl.fontFamily || FONT_FAMILIES[0]?.value}
-                      onChange={(e) =>
-                        updateEl(selectedEl.id, { fontFamily: e.target.value })
-                      }
-                      style={{
-                        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "right 12px center",
-                        backgroundSize: "20px",
-                      }}
-                      className="mt-1 w-full rounded-lg border border-white/15 bg-ink-900 px-4 py-3 text-base text-white min-h-[44px] lg:text-sm appearance-none  cursor-pointer"
-                    >
-                      {FONT_FAMILIES.map((f) => (
-                        <option key={f.value} value={f.value}>
-                          {f.name}
-                        </option>
-                      ))}
-                    </select>
+                    <fieldset>
+                      <legend className="text-xs font-semibold uppercase tracking-wide text-steel-400">
+                        Font Family
+                      </legend>
+                      <details className="group relative mt-1">
+                        <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between rounded-lg border border-white/15 bg-ink-900 px-4 py-2 hover:border-white/30 [&::-webkit-details-marker]:hidden">
+                          <span className="min-w-0">
+                            <span className="block truncate text-xs text-steel-400">
+                              {FONT_FAMILIES.find(
+                                (font) =>
+                                  font.value ===
+                                  (selectedEl.fontFamily ||
+                                    FONT_FAMILIES[0]?.value),
+                              )?.name ?? FONT_FAMILIES[0]?.name}
+                            </span>
+                            <span
+                              className="block truncate text-lg text-white"
+                              style={{
+                                fontFamily: getFontFamilyOption(
+                                  selectedEl.fontFamily,
+                                  hasArabicText(selectedEl.text ?? ""),
+                                ).family,
+                                fontWeight: getFontFamilyOption(
+                                  selectedEl.fontFamily,
+                                  hasArabicText(selectedEl.text ?? ""),
+                                ).weight,
+                              }}
+                            >
+                              {selectedEl.text ||
+                                (hasArabicText(selectedEl.text ?? "")
+                                  ? "مرحبا"
+                                  : "Aa 123")}
+                            </span>
+                          </span>
+                          <ChevronDown
+                            size={18}
+                            aria-hidden="true"
+                            className="ml-3 shrink-0 text-steel-400 transition-transform group-open:rotate-180"
+                          />
+                        </summary>
+                        <div className="absolute left-0 right-0 top-full z-50 mt-1 max-h-64 overflow-y-auto rounded-lg border border-white/15 bg-ink-900 p-2 shadow-xl">
+                          {FONT_FAMILIES.map((font) => {
+                            const previewFont = getFontFamilyOption(
+                              font.value,
+                              hasArabicText(selectedEl.text ?? ""),
+                            );
+
+                            return (
+                              <label
+                                key={font.value}
+                                className="block cursor-pointer"
+                              >
+                                <input
+                                  type="radio"
+                                  name={`font-family-${selectedEl.id}`}
+                                  value={font.value}
+                                  checked={
+                                    (selectedEl.fontFamily ||
+                                      FONT_FAMILIES[0]?.value) === font.value
+                                  }
+                                  onChange={(event) => {
+                                    updateEl(selectedEl.id, {
+                                      fontFamily: font.value,
+                                    });
+                                    const dropdown =
+                                      event.currentTarget.closest("details");
+                                    if (dropdown) dropdown.open = false;
+                                  }}
+                                  className="peer sr-only"
+                                />
+                                <span className="my-1 block rounded-md px-3 py-2 transition-colors hover:bg-white/5 peer-checked:bg-blaze-500/10 peer-checked:ring-1 peer-checked:ring-blaze-500 peer-focus-visible:ring-2 peer-focus-visible:ring-blaze-500">
+                                  <span className="block truncate text-xs text-steel-400">
+                                    {font.name}
+                                  </span>
+                                  <span
+                                    className="mt-1 block truncate text-lg text-white"
+                                    style={{
+                                      fontFamily: previewFont.family,
+                                      fontWeight: previewFont.weight,
+                                    }}
+                                  >
+                                    {selectedEl.text ||
+                                      (font.supportsArabic ? "مرحبا" : "Aa 123")}
+                                  </span>
+                                </span>
+                              </label>
+                            );
+                          })}
+                        </div>
+                      </details>
+                    </fieldset>
                   </div>
                 </>
               )}
