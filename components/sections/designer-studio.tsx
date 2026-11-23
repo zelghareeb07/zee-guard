@@ -2088,8 +2088,8 @@ export function DesignerStudio() {
 
         {/* Edit Selected - Collapsible (only show when element is selected) */}
         {selectedEl && (
-          <CollapsibleSection title="Edit Selected" defaultOpen={true}>
-            <div className="space-y-4">
+          <CollapsibleSection title="Edit Selected" defaultOpen={true} >
+            <div className="space-y-4 ">
               {selectedEl.type === "text" && (
                 <>
                   <div>

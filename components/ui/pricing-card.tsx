@@ -55,7 +55,7 @@ export function PricingCard({
 
   // Using refs - no re-renders
   const [selectedData, setSelectedData] = useState<choice>({
-    optionName: "", 
+    optionName: "",
     optionPrice: 0,
     thickness: "",
     addOns: [],
@@ -74,7 +74,9 @@ export function PricingCard({
     });
 
     // setting color to transparent if coreshield is chosen for the ones don't have color and black for the one having colors
-    if (optionName.toLowerCase().includes("CoreFit - Essential #2".toLowerCase())) {
+    if (
+      optionName.toLowerCase().includes("CoreFit - Essential #2".toLowerCase())
+    ) {
       setChosenColor("Black");
     } else {
       setChosenColor("Transparent");
@@ -132,13 +134,13 @@ export function PricingCard({
     const chosenAddOns = selectedData.addOns.map((addOn) => addOn.key);
     const addOnsMsg = chosenAddOns.length > 0 ? chosenAddOns.join(", ") : "";
 
-    const fullMsg = `Tier: ${chosenTier}\nColor: ${chosenColor}\n${addOnsMsg && "Add Ons: " + addOnsMsg}`;
+    const fullMsg = `*Tier:* ${chosenTier}\n*Color:* ${chosenColor}\n${addOnsMsg && "*Add Ons:* " + addOnsMsg}\n${"*Thickness:* " + selectedData.thickness}\n*Price:* ${totalPrice} EGP`;
 
     setMsg(encodeURIComponent(fullMsg));
   }, [chosenColor, chosenTier, selectedData.addOns]);
 
   useEffect(() => {
-    if (chosenTier?.toLowerCase().includes("corefit")) {
+    if (chosenTier !== null) {
       setWhatsappMsg();
     }
 
@@ -148,9 +150,21 @@ export function PricingCard({
       addOnStorageKey,
       JSON.stringify(selectedData.addOns),
     );
-  }, [chosenColor, chosenTier, selectedData.addOns, tier.id, msg, setWhatsappMsg]);
+    console.log(msg);
+    
+  }, [
+    chosenColor,
+    chosenTier,
+    selectedData.addOns,
+    tier.id,
+    msg,
+    setWhatsappMsg,
+  ]);
 
   return (
+
+      
+    
     <motion.div
       className={cn(
         "flex flex-col overflow-hidden rounded-2xl border bg-ink-850",
@@ -223,7 +237,8 @@ export function PricingCard({
                     handleOptionChange(
                       option.name,
                       option.price,
-                      option.spec.slice(0, 3),
+                      // option.spec.slice(0, 3),
+                      option.spec.slice(0,15),
                     );
                   }}
                   className="mt-1 h-4 w-4 accent-blaze-500 cursor-pointer"
@@ -362,20 +377,32 @@ export function PricingCard({
             {tier.ctaLabel}
           </Button>
         ) : (
-          <Button
-            href={"/designer"}
-            onClick={() => {
-              sessionStorage.setItem("isBraces", "false");
-              sessionStorage.setItem("selectedCategory", tier.id);
-            }}
-            variant={tier.ctaVariant === "solid" ? "solid" : tier.ctaVariant}
-            className="mt-auto w-full text-base md:text-xl  whitespace-normal leading-tight h-auto min-h-16 px-3 py-3"
-            disabled={chosenTier == null || chosenTier == ""}
-          >
-            {tier.ctaLabel}
-          </Button>
+          <div className="mt-auto flex-col md:flex-row flex min-w-0 gap-3">
+            <Button
+              href={"/designer"}
+              onClick={() => {
+                sessionStorage.setItem("isBraces", "false");
+                sessionStorage.setItem("selectedCategory", tier.id);
+              }}
+              variant={tier.ctaVariant === "solid" ? "solid" : tier.ctaVariant}
+              className="min-w-0 w-full flex-1 text-base md:text-base whitespace-normal leading-tight h-auto min-h-16 px-3 py-3"
+              disabled={chosenTier == null || chosenTier == ""}
+            >
+              {tier.ctaLabel}
+            </Button>
+            <Button
+              href={`https://wa.me/${WHATSAPP_INTERNATIONAL_NUMBER}?text=${msg}`}
+              variant="solid"
+              icon=<FontAwesomeIcon icon={fab.faWhatsapp} className="w-8" />
+              className="min-w-0 w-full flex-1 bg-none! bg-emerald-600! shadow-none hover:bg-emerald-600! text-base md:text-base whitespace-normal leading-tight h-auto min-h-16 px-3 py-3"
+              disabled={msg.trim() == ""}
+            >
+              {"GET YOURS NOW"}
+            </Button>
+          </div>
         )}
       </div>
     </motion.div>
+
   );
 }

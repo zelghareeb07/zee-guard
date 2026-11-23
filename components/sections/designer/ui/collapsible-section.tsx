@@ -18,7 +18,7 @@ export function CollapsibleSection({
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   return (
-    <div className="rounded-xl bg-ink-850 p-4 lg:p-6 overflow-hidden">
+    <div className="rounded-xl bg-ink-850 p-4 lg:p-6 ">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="group flex w-full items-center justify-between hover:cursor-pointer"
