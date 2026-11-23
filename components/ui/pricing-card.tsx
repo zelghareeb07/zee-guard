@@ -134,7 +134,7 @@ export function PricingCard({
     const chosenAddOns = selectedData.addOns.map((addOn) => addOn.key);
     const addOnsMsg = chosenAddOns.length > 0 ? chosenAddOns.join(", ") : "";
 
-    const fullMsg = `*Tier:* ${chosenTier}\n*Color:* ${chosenColor}\n${addOnsMsg && "*Add Ons:* " + addOnsMsg}\n${"*Thickness:* " + selectedData.thickness}\n*Price:* ${totalPrice} EGP`;
+    const fullMsg = `*Tier:* ${chosenTier}\n${tier.badge.toLowerCase() == "essential" ? "*Color:* " + chosenColor + "\n" : ""}${addOnsMsg && "*Add Ons:* " + addOnsMsg + "\n"}${"*Thickness:* " + selectedData.thickness}\n*Price:* ${totalPrice} EGP`;
 
     setMsg(encodeURIComponent(fullMsg));
   }, [chosenColor, chosenTier, selectedData.addOns]);
